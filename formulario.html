@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Coffee Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div>
+        <h1>pedido Coffee Store</h1>
+        <p>completa los datos para realizar tu pedido</p>
+
+        <form action="#" method="POST" id="pedidoForm">
+            <fieldset>
+                <legen>Datos personales</legend>
+                <div>
+                 <label for="nombre">Nombre completo *</label>
+                 <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div>
+                 <label for="dni">DNI *</label>
+                 <input type="text" id="dni" name="dni" required>
+                </div>
+
+                <div>
+                    <label for="email">Correo electronico *</label>
+                     <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="telefono">telefono *</label>
+                     <input type="tel" id="telefono" name="telefono" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Datos de entrega</legend>
+                <div>
+                 <label for="direccion">direccion *</label>
+                 <input type="text" id="direccion" name="direccion" required>
+                </div>
+                <div>
+                    <label for="barrio">barrio*</label>
+                    <select id="localidad" name="localidad" required>
+                     <option value="">Selecciona el barrio de entrega</option>
+                     <option value="caballito">Caballito</option>
+                     <option value="flores">Flores</option>
+                     <option value="almagro">Almagro</option>
+                     <option value="villa_crespo">Villa Crespo</option>
+                    </select>
+                </div>
+                <div>
+                 <label for="fecha">fecha de entrega *</label>
+                 <input type="date" id="fecha" name="fecha" required>
+                </div>
+                <div>
+                 <label>turno de entrega *</label>
+                  <div>
+                     <label>
+                        <input type="radio" name="turno" value="manana" required>
+                        Mañana
+                     </label>
+                      <label>
+                      <input type="radio" name="turno" value="tarde">
+                         Tarde
+                     </label>
+                     <label>
+                      <input type="radio" name="turno" value="noche">
+                      Noche
+                      </label>
+                   </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Tu pedido</legend>
+                <div>
+                    <label>Cafés</label>
+                    <div>
+                        <label>
+                            <input type="checkbox" name="pedido" value="espresso">
+                            Espresso - $2500
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="pedido" value="cafe_con_leche">
+                            Café con leche - $3200
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="pedido" value="cappuccino">
+                            Cappuccino - $3500
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="pedido" value="latte">
+                            Latte - $3800
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="pedido" value="mocha">
+                            Mocha - $4000
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <label>Para acompañar</label>
+                    <div>
+                        <label>
+                            <input type="checkbox" name="pedido" value="medialuna">
+                            Medialuna - $1200
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="pedido" value="tostado">
+                            Tostado JyQ - $4500
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="pedido" value="torta">
+                            Torta del día - $3800
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="pedido" value="cookie">
+                            Cookie - $2000
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>detalles</legend>
+
+                <div>
+                    <label for="comentarios">indicaciones para la entrega</label>
+                    <textarea id="comentarios" name="comentarios"
+                        rows="4"
+                        ></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>por seguridad</legend>
+                <div>
+                    <label for="password">contraseña *</label>
+                    <input type="password" id="password" name="password"
+                        placeholder="Mínimo 8 caracteres"
+                        minlength="8" required>
+                </div>
+
+                <div>
+                    <label for="confirmPassword">confirmar contraseña *</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword"
+                        placeholder="repeti  tu contraseña"
+                        minlength="8" required>
+                </div>
+            </fieldset>
+            <div>
+                <label>
+                    <input type="checkbox" name="terminos" required>
+                    Acepto los <a >terminos y condiciones</a> *
+                </label>
+            </div>
+            <div>
+                <button type="submit">realizar pedido</button>
+                <button type="reset">limpiar formulario</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>
+
